@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent" >
+    
+    
+    <RelativeLayout
+        android:id="@+id/pinDetailHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true" >
+
+         
+         <TextView
+                android:id="@+id/tvPinterestDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:text="Red and White"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+         
+        </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1"
+        android:layout_below="@+id/pinDetailHeader" >
+
+        <com.etsy.android.grid.StaggeredGridView
+            android:id="@+id/grid_view_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:column_count="2"
+            app:item_margin="8dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
